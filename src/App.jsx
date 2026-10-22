@@ -871,9 +871,14 @@ export default function App() {
               <span className="timeline-dot" />
 
               <div className="timeline-card education-degree-card">
-                <div className="university-logo">
-                  <img src="/vignan.jpeg" alt="Vignan University" />
-                </div>
+                
+<div className="university-logo">
+  <img
+    src={`${import.meta.env.BASE_URL}vignan.jpeg`}
+    alt="Vignan University"
+  />
+</div>
+
 
                 <div className="university-details">
                   <span className="timeline-label">EDUCATION</span>
