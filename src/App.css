@@ -6404,3 +6404,457 @@ footer {
   pointer-events: none;
 }
 
+/* ===== RESPONSIVE EDUCATION & CONTACT FIX ===== */
+
+/* Prevent horizontal overflow */
+.education,
+.education-section,
+.contact,
+.contact-section {
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+.education *,
+.education-section *,
+.contact *,
+.contact-section * {
+  box-sizing: border-box;
+}
+
+/* Education cards */
+.education-grid,
+.education-cards,
+.education-container {
+  width: 100%;
+  min-width: 0;
+}
+
+.university-logo {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.university-logo img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Contact social cards */
+.contact-socials,
+.social-links,
+.contact-links,
+.social-cards {
+  width: 100%;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contact-socials > *,
+.social-links > *,
+.contact-links > *,
+.social-cards > * {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 768px) {
+  .education-grid,
+  .education-cards,
+  .education-container {
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+  }
+
+  .contact-socials,
+  .social-links,
+  .contact-links,
+  .social-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .university-logo img {
+    max-height: 100px;
+    object-fit: contain;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .education,
+  .education-section,
+  .contact,
+  .contact-section {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .contact-socials,
+  .social-links,
+  .contact-links,
+  .social-cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .contact-socials > *,
+  .social-links > *,
+  .contact-links > *,
+  .social-cards > * {
+    width: 100%;
+  }
+
+  .university-logo img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* ===== MOBILE EDUCATION RESPONSIVE ===== */
+
+@media (max-width: 600px) {
+  .education-section .education-card,
+  .education .education-card,
+  #education .education-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 18px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .university-logo {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-self: center !important;
+  }
+
+  .university-logo img {
+    width: 100px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+
+  .education-section h1,
+  .education-section h2,
+  .education-section h3,
+  #education h1,
+  #education h2,
+  #education h3 {
+    max-width: 100% !important;
+    text-align: center;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  .education-section p,
+  #education p {
+    overflow-wrap: break-word;
+  }
+}
+
+/* ===== MOBILE CONTACT SOCIAL BOXES ===== */
+
+@media (max-width: 600px) {
+  .contact-section,
+  .contact,
+  #contact {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .contact-section *,
+  .contact *,
+  #contact * {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  .contact-socials,
+  .social-links,
+  .contact-links,
+  .social-cards {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .contact-socials > *,
+  .social-links > *,
+  .contact-links > *,
+  .social-cards > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* ======================================
+   EDUCATION CARD - DESKTOP RESPONSIVE
+====================================== */
+
+.education-responsive-card {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr) 76px;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+  padding: 26px;
+  box-sizing: border-box;
+}
+
+.education-responsive-card * {
+  box-sizing: border-box;
+}
+
+.edu-responsive-logo {
+  width: 110px;
+  max-width: 100%;
+  justify-self: center;
+}
+
+.edu-responsive-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+.edu-responsive-details {
+  min-width: 0;
+  width: 100%;
+}
+
+.edu-responsive-label,
+.edu-responsive-grade-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.edu-responsive-title {
+  margin: 12px 0 8px;
+  font-size: 21px;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.edu-responsive-type {
+  margin: 0 0 12px;
+  line-height: 1.6;
+}
+
+.edu-responsive-degree {
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.edu-responsive-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 12px 22px;
+}
+
+.edu-responsive-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  min-width: 0;
+  line-height: 1.6;
+}
+
+.edu-responsive-info-item span:last-child {
+  overflow-wrap: anywhere;
+}
+
+.edu-responsive-icon {
+  flex-shrink: 0;
+}
+
+.edu-responsive-grade {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.edu-responsive-grade-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid #258bc2;
+  border-radius: 15px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* ======================================
+   EDUCATION CARD - TABLET
+====================================== */
+
+@media (max-width: 768px) {
+  .education-responsive-card {
+    grid-template-columns: 84px minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .edu-responsive-logo {
+    width: 84px;
+  }
+
+  .edu-responsive-title {
+    font-size: 19px;
+  }
+
+  .edu-responsive-grade {
+    grid-column: 2;
+    align-items: flex-start;
+    margin-top: 2px;
+    gap: 6px;
+  }
+
+  .edu-responsive-grade-value {
+    width: 42px;
+    height: 42px;
+    font-size: 23px;
+  }
+}
+
+/* ======================================
+   EDUCATION CARD - MOBILE
+====================================== */
+
+@media (max-width: 600px) {
+  #education .education-responsive-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    height: auto !important;
+    padding: 22px 18px !important;
+    overflow: visible;
+  }
+
+  #education .edu-responsive-logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100px;
+    max-width: 100%;
+    margin: 0 auto 2px;
+  }
+
+  #education .edu-responsive-logo img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  #education .edu-responsive-details {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    text-align: left;
+  }
+
+  #education .edu-responsive-label {
+    margin-bottom: 10px;
+    font-size: 10px;
+  }
+
+  #education .edu-responsive-title {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 10px;
+    font-size: 20px;
+    line-height: 1.45;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  #education .edu-responsive-type {
+    margin: 0 0 12px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #education .edu-responsive-degree {
+    margin: 0 0 16px;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  #education .edu-responsive-info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+  }
+
+  #education .edu-responsive-info-item {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  #education .edu-responsive-info-item span:last-child {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  #education .edu-responsive-grade {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 2px;
+  }
+
+  #education .edu-responsive-grade-label {
+    font-size: 10px;
+  }
+
+  #education .edu-responsive-grade-value {
+    width: 44px;
+    height: 44px;
+    font-size: 24px;
+    border-radius: 12px;
+  }
+}
+

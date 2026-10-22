@@ -55,21 +55,21 @@ const technologies = [
   { name: "Express.js", icon: "simple-icons:express", color: "#FFFFFF" },
   { name: "MongoDB", icon: "simple-icons:mongodb", color: "#47A248" },
   {
-  name: "Firebase",
-  icon: "simple-icons:firebase",
-  color: "#FFCA28",
-},
+    name: "Firebase",
+    icon: "simple-icons:firebase",
+    color: "#FFCA28",
+  },
   { name: "MySQL", icon: "simple-icons:mysql", color: "#4479A1" },
   { name: "Git", icon: "simple-icons:git", color: "#F05032" },
   { name: "GitHub", icon: "simple-icons:github", color: "#FFFFFF" },
   { name: "Tailwind CSS", icon: "simple-icons:tailwindcss", color: "#06B6D4" },
   {
-  name: "Bootstrap",
-  icon: "simple-icons:bootstrap",
-  color: "#7952B3",
-},
+    name: "Bootstrap",
+    icon: "simple-icons:bootstrap",
+    color: "#7952B3",
+  },
   { name: "Figma", icon: "simple-icons:figma", color: "#F24E1E" },
-  
+
 
 
   {
@@ -225,18 +225,18 @@ function ProjectCard({ project }) {
               <span className="browser-menu">•••</span>
             </div>
 
-            
-<div className={`mock-app mock-app-${projectType} project-image-preview`}>
-  <img
-    src={project.image}
-    alt={project.alt || project.title}
-    className="laptop-project-image"
-    loading="lazy"
-    onError={(e) => {
-      e.currentTarget.style.display = "none";
-    }}
-  />
-</div>
+
+            <div className={`mock-app mock-app-${projectType} project-image-preview`}>
+              <img
+                src={project.image}
+                alt={project.alt || project.title}
+                className="laptop-project-image"
+                loading="lazy"
+                onError={(e) => {
+                  e.currentTarget.style.display = "none";
+                }}
+              />
+            </div>
 
           </div>
 
@@ -715,65 +715,65 @@ export default function App() {
             </div>
           </div>
 
-          
-
-{/* HERO PHOTO - NEW CIRCULAR ORBIT DESIGN */}
-<div className="rafi-hero-visual">
-  <div className="rafi-hero-stage">
-
-    {/* Decorative orbit rings */}
-    <div className="rafi-ring rafi-ring-one" />
-    <div className="rafi-ring rafi-ring-two" />
-    <div className="rafi-ring rafi-ring-three" />
-
-    {/* Rotating technology badges */}
-    <div className="rafi-tech-orbit">
-      {orbitSkills.map(({ name, icon, color }, index) => (
-        <div
-          className={`rafi-tech-badge rafi-tech-badge-${index}`}
-          key={name}
-          title={name}
-          style={{ "--rafi-tech-color": color }}
-        >
-          <Icon icon={icon} aria-hidden="true" />
-          <small>{name}</small>
-        </div>
-      ))}
-    </div>
-
-    {/* Circular portrait */}
-    <div className="rafi-portrait-shell">
-      <div className="rafi-portrait-aura" />
-
-      <div className="rafi-portrait-inner">
-        
-<img
-  className="rafi-portrait-photo"
-  src={`${import.meta.env.BASE_URL}profile_1.jpeg`}
-  alt="Mohammad Rafi"
-  onError={(event) => {
-    event.currentTarget.style.display = "none";
-
-    const placeholder =
-      event.currentTarget.nextElementSibling;
-
-    if (placeholder) {
-      placeholder.style.display = "flex";
-    }
-  }}
-/>
 
 
-        <div className="rafi-portrait-fallback">
-          <span>R</span>
-          <small>Add your photo</small>
-          <small>public/profile_1.jpeg</small>
-        </div>
-      </div>
-    </div>
+          {/* HERO PHOTO - NEW CIRCULAR ORBIT DESIGN */}
+          <div className="rafi-hero-visual">
+            <div className="rafi-hero-stage">
 
-  </div>
-</div>
+              {/* Decorative orbit rings */}
+              <div className="rafi-ring rafi-ring-one" />
+              <div className="rafi-ring rafi-ring-two" />
+              <div className="rafi-ring rafi-ring-three" />
+
+              {/* Rotating technology badges */}
+              <div className="rafi-tech-orbit">
+                {orbitSkills.map(({ name, icon, color }, index) => (
+                  <div
+                    className={`rafi-tech-badge rafi-tech-badge-${index}`}
+                    key={name}
+                    title={name}
+                    style={{ "--rafi-tech-color": color }}
+                  >
+                    <Icon icon={icon} aria-hidden="true" />
+                    <small>{name}</small>
+                  </div>
+                ))}
+              </div>
+
+              {/* Circular portrait */}
+              <div className="rafi-portrait-shell">
+                <div className="rafi-portrait-aura" />
+
+                <div className="rafi-portrait-inner">
+
+                  <img
+                    className="rafi-portrait-photo"
+                    src={`${import.meta.env.BASE_URL}profile_1.jpeg`}
+                    alt="Mohammad Rafi"
+                    onError={(event) => {
+                      event.currentTarget.style.display = "none";
+
+                      const placeholder =
+                        event.currentTarget.nextElementSibling;
+
+                      if (placeholder) {
+                        placeholder.style.display = "flex";
+                      }
+                    }}
+                  />
+
+
+                  <div className="rafi-portrait-fallback">
+                    <span>R</span>
+                    <small>Add your photo</small>
+                    <small>public/profile_1.jpeg</small>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
 
 
         </section>
@@ -858,6 +858,7 @@ export default function App() {
           </div>
         </section>
 
+
         {/* EDUCATION */}
         <section className="section container" id="education">
           <SectionHeading
@@ -867,56 +868,54 @@ export default function App() {
           />
 
           <div className="timeline">
+            {/* UNIVERSITY EDUCATION */}
             <div className="timeline-item">
               <span className="timeline-dot" />
 
-              <div className="timeline-card education-degree-card">
-                
-<div className="university-logo">
-  <img
-    src={`${import.meta.env.BASE_URL}vignan.jpeg`}
-    alt="Vignan University"
-  />
-</div>
+              <div className="timeline-card education-responsive-card">
+                <div className="edu-responsive-logo">
+                  <img
+                    src={`${import.meta.env.BASE_URL}vignan.jpeg`}
+                    alt="Vignan University"
+                  />
+                </div>
 
+                <div className="edu-responsive-details">
+                  <span className="edu-responsive-label">EDUCATION</span>
 
-                <div className="university-details">
-                  <span className="timeline-label">EDUCATION</span>
-
-                  <h3>
+                  <h3 className="edu-responsive-title">
                     Vignan's Foundation for Science, Technology &amp; Research
                   </h3>
 
-                  <p className="university-type">
+                  <p className="edu-responsive-type">
                     (Deemed to be University)
                   </p>
 
-                  <p className="degree-name">
+                  <p className="edu-responsive-degree">
                     B.Tech, Chemical Engineering
                   </p>
 
-                  <div className="education-information">
-                    <span>
-                      <span className="education-icon">▣</span>
-                      2019 - 2023
-                    </span>
+                  <div className="edu-responsive-info">
+                    <div className="edu-responsive-info-item">
+                      <span className="edu-responsive-icon">▣</span>
+                      <span>2019 - 2023</span>
+                    </div>
 
-                    <span className="education-divider" />
-
-                    <span>
-                      <span className="education-icon">⌖</span>
-                      Guntur, Andhra Pradesh
-                    </span>
+                    <div className="edu-responsive-info-item">
+                      <span className="edu-responsive-icon">⌖</span>
+                      <span>Guntur, Andhra Pradesh</span>
+                    </div>
                   </div>
                 </div>
 
-                <div className="university-grade">
-                  <span className="grade-label">GRADE</span>
-                  <div className="grade-value">A</div>
+                <div className="edu-responsive-grade">
+                  <span className="edu-responsive-grade-label">GRADE</span>
+                  <div className="edu-responsive-grade-value">A</div>
                 </div>
               </div>
             </div>
 
+            {/* CONTINUOUS LEARNING */}
             <div className="timeline-item">
               <span className="timeline-dot" />
 
@@ -935,6 +934,7 @@ export default function App() {
             </div>
           </div>
         </section>
+
 
         {/* SKILLS */}
         <section className="section container" id="skills">
@@ -982,179 +982,179 @@ export default function App() {
           </div>
         </section>
 
-        
 
-{/* CONTACT */}
-<section className="section container" id="contact">
-  <div className="contact-panel">
-    <span className="section-eyebrow">
-      HAVE A PROJECT IN MIND?
-    </span>
 
-    <h2>
-      Let's create something <span>great.</span>
-    </h2>
+        {/* CONTACT */}
+        <section className="section container" id="contact">
+          <div className="contact-panel">
+            <span className="section-eyebrow">
+              HAVE A PROJECT IN MIND?
+            </span>
 
-    <p>
-      Interested in working together or discussing an idea? Feel free
-      to reach out.
-    </p>
+            <h2>
+              Let's create something <span>great.</span>
+            </h2>
 
-    <a
-      className="button button-primary"
-      href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdrafi0701%40gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Say Hello <span>↗</span>
-    </a>
+            <p>
+              Interested in working together or discussing an idea? Feel free
+              to reach out.
+            </p>
 
-    {/* EMAIL BOX WITH COPY BUTTON */}
-    <div className="contact-email-box">
-      <Icon
-        icon="solar:letter-linear"
-        className="email-icon"
-      />
+            <a
+              className="button button-primary"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=mohdrafi0701%40gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Say Hello <span>↗</span>
+            </a>
 
-      <span className="contact-email-text">
-        mohdrafi0701@gmail.com
-      </span>
+            {/* EMAIL BOX WITH COPY BUTTON */}
+            <div className="contact-email-box">
+              <Icon
+                icon="solar:letter-linear"
+                className="email-icon"
+              />
 
-      <button
-        type="button"
-        className="contact-copy-btn"
-        title="Copy email address"
-        aria-label="Copy email address"
-        onClick={async (event) => {
-          const email = "mohdrafi0701@gmail.com";
-          const button = event.currentTarget;
+              <span className="contact-email-text">
+                mohdrafi0701@gmail.com
+              </span>
 
-          try {
-            await navigator.clipboard.writeText(email);
-          } catch {
-            const textarea = document.createElement("textarea");
-            textarea.value = email;
-            textarea.style.position = "fixed";
-            textarea.style.opacity = "0";
-            document.body.appendChild(textarea);
-            textarea.select();
-            document.execCommand("copy");
-            textarea.remove();
-          }
+              <button
+                type="button"
+                className="contact-copy-btn"
+                title="Copy email address"
+                aria-label="Copy email address"
+                onClick={async (event) => {
+                  const email = "mohdrafi0701@gmail.com";
+                  const button = event.currentTarget;
 
-          button.dataset.copied = "true";
-          button.setAttribute("title", "Copied!");
+                  try {
+                    await navigator.clipboard.writeText(email);
+                  } catch {
+                    const textarea = document.createElement("textarea");
+                    textarea.value = email;
+                    textarea.style.position = "fixed";
+                    textarea.style.opacity = "0";
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand("copy");
+                    textarea.remove();
+                  }
 
-          window.setTimeout(() => {
-            button.dataset.copied = "false";
-            button.setAttribute("title", "Copy email address");
-          }, 1800);
-        }}
-      >
-        <Icon
-          icon="solar:copy-linear"
-          width="21"
-          height="21"
-        />
-      </button>
-    </div>
+                  button.dataset.copied = "true";
+                  button.setAttribute("title", "Copied!");
 
-    {/* SOCIAL LINKS */}
-    <div className="social-links-box">
-      <a
-        href="https://github.com/karimmohdrafi"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="social-link"
-        aria-label="GitHub Profile"
-        title="GitHub"
-      >
-        <Icon icon="simple-icons:github" width="26" height="26" />
-        <span>GitHub</span>
-        <span className="social-arrow">↗</span>
-      </a>
+                  window.setTimeout(() => {
+                    button.dataset.copied = "false";
+                    button.setAttribute("title", "Copy email address");
+                  }, 1800);
+                }}
+              >
+                <Icon
+                  icon="solar:copy-linear"
+                  width="21"
+                  height="21"
+                />
+              </button>
+            </div>
 
-      <span className="social-divider" />
+            {/* SOCIAL LINKS */}
+            <div className="social-links-box">
+              <a
+                href="https://github.com/karimmohdrafi"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="GitHub Profile"
+                title="GitHub"
+              >
+                <Icon icon="simple-icons:github" width="26" height="26" />
+                <span>GitHub</span>
+                <span className="social-arrow">↗</span>
+              </a>
 
-      <a
-        href="https://www.linkedin.com/in/mohdrafi0701/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="social-link"
-        aria-label="LinkedIn Profile"
-        title="LinkedIn"
-      >
-        <Icon icon="simple-icons:linkedin" width="26" height="26" />
-        <span>LinkedIn</span>
-        <span className="social-arrow">↗</span>
-      </a>
+              <span className="social-divider" />
 
-      <a
-        href="https://leetcode.com/u/mohdrafiksg/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="social-link"
-        aria-label="LeetCode Profile"
-        title="LeetCode"
-      >
-        <Icon icon="simple-icons:leetcode" width="26" height="26" />
-        <span>LeetCode</span>
-        <span className="social-arrow">↗</span>
-      </a>
-    </div>
+              <a
+                href="https://www.linkedin.com/in/mohdrafi0701/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="LinkedIn Profile"
+                title="LinkedIn"
+              >
+                <Icon icon="simple-icons:linkedin" width="26" height="26" />
+                <span>LinkedIn</span>
+                <span className="social-arrow">↗</span>
+              </a>
 
-    
-  </div>
-</section>
+              <a
+                href="https://leetcode.com/u/mohdrafiksg/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="LeetCode Profile"
+                title="LeetCode"
+              >
+                <Icon icon="simple-icons:leetcode" width="26" height="26" />
+                <span>LeetCode</span>
+                <span className="social-arrow">↗</span>
+              </a>
+            </div>
+
+
+          </div>
+        </section>
 
       </main>
-      
 
 
-{/* MR OUTLINE MONOGRAM */}
-<div className="mr-outline-logo" aria-label="MR monogram">
-  <svg
-    viewBox="0 0 180 130"
-    className="mr-outline-svg"
-    xmlns="http://www.w3.org/2000/svg"
-    aria-hidden="true"
-  >
-    {/* M outline */}
-    <path
-      className="mr-outline-path mr-m-path"
-      d="M25 112 V18 L70 68 L115 18 V112"
-    />
 
-    {/* R outline, interlocked with M */}
-    <path
-      className="mr-outline-path mr-r-path"
-      d="M65 112 V18 H105
+      {/* MR OUTLINE MONOGRAM */}
+      <div className="mr-outline-logo" aria-label="MR monogram">
+        <svg
+          viewBox="0 0 180 130"
+          className="mr-outline-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          {/* M outline */}
+          <path
+            className="mr-outline-path mr-m-path"
+            d="M25 112 V18 L70 68 L115 18 V112"
+          />
+
+          {/* R outline, interlocked with M */}
+          <path
+            className="mr-outline-path mr-r-path"
+            d="M65 112 V18 H105
          C132 18 140 35 140 49
          C140 64 128 78 105 78
          H65 M105 78 L145 112"
-    />
-  </svg>
-</div>
+          />
+        </svg>
+      </div>
       {/* FOOTER */}
-      
-{/* FOOTER */}
 
-{/* COMPACT FOOTER */}
-<footer className="site-footer">
-  <div className="footer-inner">
-    <a href="#home" className="logo footer-brand">
-      MR<span>.</span>
-    </a>
+      {/* FOOTER */}
 
-    <p className="footer-copyright">
-      © {new Date().getFullYear()} Mohammad Rafi. All rights reserved.
-    </p>
+      {/* COMPACT FOOTER */}
+      <footer className="site-footer">
+        <div className="footer-inner">
+          <a href="#home" className="logo footer-brand">
+            MR<span>.</span>
+          </a>
 
-    <a href="#home" className="back-to-top">
-      Back to top <span>↑</span>
-    </a>
-  </div>
-</footer>
+          <p className="footer-copyright">
+            © {new Date().getFullYear()} Mohammad Rafi. All rights reserved.
+          </p>
+
+          <a href="#home" className="back-to-top">
+            Back to top <span>↑</span>
+          </a>
+        </div>
+      </footer>
 
 
     </div>
