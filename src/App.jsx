@@ -98,7 +98,7 @@ const projects = [
     title: "AI Nexus",
     description:
       "An intelligent AI platform featuring Medical AI, Voice AI, Image Generation, phishing detection, speech recognition, file conversion, location tracking, and interactive utilities in one place.",
-    image: "/project_1.png",
+    image: `${import.meta.env.BASE_URL}project_1.png`,
     alt: "AI Nexus project preview",
     tags: ["React", "FireBase", "Router", "AI"],
     type: "ai",
@@ -111,7 +111,7 @@ const projects = [
     title: "Dashboard",
     description:
       "An interactive data dashboard that displays active users, request throughput, error rates, and real-time traffic through dynamic charts and animated visualizations.",
-    image: "/project_2.png",
+    image: `${import.meta.env.BASE_URL}project_2.png`,
     alt: "Dashboard application preview",
     tags: ["HTML", "CSS", "JavaScript"],
     type: "dashboard",
@@ -124,7 +124,7 @@ const projects = [
     title: "Food Application",
     description:
       "A modern food application that lets users explore delicious meals, browse food options, and enjoy a smooth, user-friendly ordering experience.",
-    image: "/project_3.png",
+    image: `${import.meta.env.BASE_URL}project_3.png`,
     alt: "Food Application preview",
     tags: ["React", "JavaScript", "Router"],
     type: "tasks",
@@ -137,7 +137,7 @@ const projects = [
     title: "Chess Game",
     description:
       "A sleek chess application featuring an interactive chessboard, legal move validation, and a smooth, user-friendly gameplay experience.",
-    image: "/project_4.png",
+    image: `${import.meta.env.BASE_URL}project_4.png`,
     alt: "Chess game preview",
     tags: ["React", "Router", "JavaScript"],
     type: "default",
@@ -150,7 +150,7 @@ const projects = [
     title: "Real-Time JARVIS",
     description:
       "A real-time AI voice assistant inspired by JARVIS, designed to provide interactive voice-based assistance through a modern user interface.",
-    image: "/project_5.png",
+    image: `${import.meta.env.BASE_URL}project_5.png`,
     alt: "Jarvis preview",
     tags: ["HTML", "CSS", "JavaScript", "AI"],
     type: "default",
@@ -163,7 +163,7 @@ const projects = [
     title: "Weather Application",
     description:
       "A responsive Weather Application that provides real-time weather updates, temperature, humidity, wind speed, and current weather conditions for different locations.",
-    image: "/project_6.png",
+    image: `${import.meta.env.BASE_URL}project_6.png`,
     alt: "Weather application preview",
     tags: ["HMTL/CSS", "API", "JavaScript"],
     type: "default",
@@ -746,21 +746,23 @@ export default function App() {
       <div className="rafi-portrait-aura" />
 
       <div className="rafi-portrait-inner">
-        <img
-          className="rafi-portrait-photo"
-          src="/profile_1.jpeg"
-          alt="Mohammad Rafi"
-          onError={(event) => {
-            event.currentTarget.style.display = "none";
+        
+<img
+  className="rafi-portrait-photo"
+  src={`${import.meta.env.BASE_URL}profile_1.jpeg`}
+  alt="Mohammad Rafi"
+  onError={(event) => {
+    event.currentTarget.style.display = "none";
 
-            const placeholder =
-              event.currentTarget.nextElementSibling;
+    const placeholder =
+      event.currentTarget.nextElementSibling;
 
-            if (placeholder) {
-              placeholder.style.display = "flex";
-            }
-          }}
-        />
+    if (placeholder) {
+      placeholder.style.display = "flex";
+    }
+  }}
+/>
+
 
         <div className="rafi-portrait-fallback">
           <span>R</span>
