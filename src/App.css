@@ -6858,3 +6858,43 @@ footer {
   }
 }
 
+
+/* ===== CONTINUOUS MR MONOGRAM ANIMATION ===== */
+
+.mr-outline-path {
+  fill: none;
+  stroke-dasharray: 500;
+  stroke-dashoffset: 500;
+  animation: mr-draw-loop 3s ease-in-out infinite;
+}
+
+.mr-m-path {
+  animation-delay: 0s;
+}
+
+.mr-r-path {
+  animation-delay: 0.45s;
+}
+
+@keyframes mr-draw-loop {
+  0% {
+    stroke-dashoffset: 500;
+  }
+
+  45% {
+    stroke-dashoffset: 0;
+  }
+
+  75% {
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    stroke-dashoffset: -500;
+  }
+}
+
+.mr-outline-svg {
+  overflow: visible;
+}
+
